@@ -93,8 +93,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/rgColors"
                     android:text="M"
-                    android:textColor="@color/colorPrimary"
-                    android:background="@color/white"
+                    android:textColor="@drawable/button_text_color"
+                    android:background="@drawable/button_border"
                     />
 
                 <Button
@@ -103,7 +103,9 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/rgColors"
                     android:layout_toRightOf="@+id/btnM"
-                    android:text="S" />
+                    android:text="S"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/button_border"/>
 
                 <Button
                     android:id="@+id/btnL"
@@ -111,7 +113,9 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/rgColors"
                     android:layout_toRightOf="@+id/btnS"
-                    android:text="L" />
+                    android:text="L"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/button_border"/>
 
                 <Button
                     android:id="@+id/btnXL"
@@ -119,7 +123,9 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/rgColors"
                     android:layout_toRightOf="@+id/btnL"
-                    android:text="XL" />
+                    android:text="XL"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/button_border"/>
 
                 <TextView
                     android:id="@+id/txtDescription"
