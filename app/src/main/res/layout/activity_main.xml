@@ -22,7 +22,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="1137dp">
+                android:layout_height="match_parent">
 
                 <View
                     android:layout_width="match_parent"
@@ -39,9 +39,11 @@
                     android:id="@+id/drawLike"
                     android:layout_width="63dp"
                     android:layout_height="59dp"
-                    android:layout_marginLeft="227dp"
-                    android:layout_toRightOf="@+id/txtVintage"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="26dp"
                     android:background="@drawable/like"
+                    android:onClick="displayToastMsg"
                     android:scaleType="fitCenter" />
 
                 <TextView
@@ -90,7 +92,10 @@
                     android:layout_width="46dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/rgColors"
-                    android:text="M" />
+                    android:text="M"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@color/white"
+                    />
 
                 <Button
                     android:id="@+id/btnS"
