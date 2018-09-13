@@ -22,12 +22,12 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="1137dp">
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/gray"/>
+                    android:background="@color/gray" />
 
                 <TextView
                     android:id="@+id/txtVintage"
@@ -35,13 +35,22 @@
                     android:layout_height="wrap_content"
                     android:text="@string/BicycleTxt" />
 
+                <ImageButton
+                    android:id="@+id/drawLike"
+                    android:layout_width="63dp"
+                    android:layout_height="59dp"
+                    android:layout_marginLeft="227dp"
+                    android:layout_toRightOf="@+id/txtVintage"
+                    android:background="@drawable/like"
+                    android:scaleType="fitCenter" />
+
                 <TextView
                     android:id="@+id/txtColor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txtVintage"
                     android:text="@string/ColorTxt"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black" />
 
                 <RadioGroup
                     android:id="@+id/rgColors"
@@ -54,25 +63,25 @@
                         android:id="@+id/rbColor1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/gray"/>
+                        android:buttonTint="@color/gray" />
 
                     <RadioButton
                         android:id="@+id/rbColor2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/brown"/>
+                        android:buttonTint="@color/brown" />
 
                     <RadioButton
                         android:id="@+id/rbColor3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/pink"/>
+                        android:buttonTint="@color/pink" />
 
                     <RadioButton
                         android:id="@+id/rbColor4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/black"/>
+                        android:buttonTint="@color/black" />
 
                 </RadioGroup>
 
@@ -97,7 +106,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/rgColors"
                     android:layout_toRightOf="@+id/btnS"
-                    android:text="L"/>
+                    android:text="L" />
 
                 <Button
                     android:id="@+id/btnXL"
@@ -105,7 +114,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/rgColors"
                     android:layout_toRightOf="@+id/btnL"
-                    android:text="XL"/>
+                    android:text="XL" />
 
                 <TextView
                     android:id="@+id/txtDescription"
@@ -113,7 +122,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/btnM"
                     android:text="@string/DescriptionTxt"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/multilineDesciption"
@@ -123,26 +132,25 @@
                     android:text="@string/mlDescription" />
 
                 <TextView
+                    android:id="@+id/measurementTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/measurementTxt"
                     android:layout_below="@+id/multilineDesciption"
                     android:text="@string/MeasurementTxt"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black" />
 
                 <TextView
+                    android:id="@+id/mlMeasurementTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/mlMeasurementTxt"
                     android:layout_below="@+id/measurementTxt"
-                    android:text="@string/mlMeasurement"/>
+                    android:text="@string/mlMeasurement" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/mlMeasurementTxt"
                     android:text="@string/AddCartTxt" />
-
 
 
             </RelativeLayout>
