@@ -1,176 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ActivityMain">
+    android:id="@+id/activity_main_land"
+    android:orientation="vertical">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:fillViewport="true">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
+            android:orientation="vertical">
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/bicicleta"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter" />
-
-
-            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+                android:src="@drawable/bicicleta"
+                android:adjustViewBounds="true" />
 
-                <View
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                />
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                >
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/gray" />
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
 
-                <TextView
-                    android:id="@+id/txtVintage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/BicycleTxt" />
-
-                <ImageButton
-                    android:id="@+id/drawLike"
-                    android:layout_width="63dp"
-                    android:layout_height="59dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginEnd="26dp"
-                    android:background="@drawable/like"
-                    android:onClick="displayToastMsg"
-                    android:scaleType="fitCenter" />
-
-                <TextView
-                    android:id="@+id/txtColor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/txtVintage"
-                    android:text="@string/ColorTxt"
-                    android:textColor="@color/black" />
-
-                <RadioGroup
-                    android:id="@+id/rgColors"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/txtColor"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/rbColor1"
+                    <TextView
+                        android:id="@+id/txtVintage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/gray" />
+                        android:text="@string/BicycleTxt" />
 
-                    <RadioButton
-                        android:id="@+id/rbColor2"
+                    <ImageButton
+                        android:id="@+id/drawLike"
+                        android:layout_width="63dp"
+                        android:layout_height="59dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="26dp"
+                        android:background="@drawable/like"
+                        android:onClick="displayToastMsg"
+                        android:scaleType="fitCenter" />
+
+                    <TextView
+                        android:id="@+id/txtColor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/brown" />
+                        android:layout_below="@+id/txtVintage"
+                        android:text="@string/ColorTxt"
+                        android:textColor="@color/black" />
 
-                    <RadioButton
-                        android:id="@+id/rbColor3"
+                    <RadioGroup
+                        android:id="@+id/rgColors"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/pink" />
+                        android:layout_below="@+id/txtColor"
+                        android:orientation="horizontal">
 
-                    <RadioButton
-                        android:id="@+id/rbColor4"
+                        <RadioButton
+                            android:id="@+id/rbColor1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/gray" />
+
+                        <RadioButton
+                            android:id="@+id/rbColor2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/brown" />
+
+                        <RadioButton
+                            android:id="@+id/rbColor3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/pink" />
+
+                        <RadioButton
+                            android:id="@+id/rbColor4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/black" />
+
+                    </RadioGroup>
+
+                    <Button
+                        android:id="@+id/btnM"
+                        android:layout_width="46dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rgColors"
+                        android:text="M"
+                        android:textColor="@drawable/button_text_color"
+                        android:background="@drawable/button_border"
+                        android:onClick="stayFocused"
+                        />
+
+                    <Button
+                        android:id="@+id/btnS"
+                        android:layout_width="46dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rgColors"
+                        android:layout_toRightOf="@+id/btnM"
+                        android:text="S"
+                        android:textColor="@color/colorPrimary"
+                        android:background="@drawable/button_border"/>
+
+                    <Button
+                        android:id="@+id/btnL"
+                        android:layout_width="46dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rgColors"
+                        android:layout_toRightOf="@+id/btnS"
+                        android:text="L"
+                        android:textColor="@color/colorPrimary"
+                        android:background="@drawable/button_border"/>
+
+                    <Button
+                        android:id="@+id/btnXL"
+                        android:layout_width="46dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rgColors"
+                        android:layout_toRightOf="@+id/btnL"
+                        android:text="XL"
+                        android:textColor="@color/colorPrimary"
+                        android:background="@drawable/button_border"/>
+
+                    <TextView
+                        android:id="@+id/txtDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/black" />
+                        android:layout_below="@+id/btnM"
+                        android:text="@string/DescriptionTxt"
+                        android:textColor="@color/black" />
 
-                </RadioGroup>
+                    <TextView
+                        android:id="@+id/multilineDesciption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtDescription"
+                        android:text="@string/mlDescription" />
 
-                <Button
-                    android:id="@+id/btnM"
-                    android:layout_width="46dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/rgColors"
-                    android:text="M"
-                    android:textColor="@drawable/button_text_color"
-                    android:background="@drawable/button_border"
-                    android:onClick="stayFocused"
-                    />
+                    <TextView
+                        android:id="@+id/measurementTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/multilineDesciption"
+                        android:text="@string/MeasurementTxt"
+                        android:textColor="@color/black" />
 
-                <Button
-                    android:id="@+id/btnS"
-                    android:layout_width="46dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/rgColors"
-                    android:layout_toRightOf="@+id/btnM"
-                    android:text="S"
-                    android:textColor="@color/colorPrimary"
-                    android:background="@drawable/button_border"/>
+                    <TextView
+                        android:id="@+id/mlMeasurementTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/measurementTxt"
+                        android:text="@string/mlMeasurement" />
 
-                <Button
-                    android:id="@+id/btnL"
-                    android:layout_width="46dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/rgColors"
-                    android:layout_toRightOf="@+id/btnS"
-                    android:text="L"
-                    android:textColor="@color/colorPrimary"
-                    android:background="@drawable/button_border"/>
-
-                <Button
-                    android:id="@+id/btnXL"
-                    android:layout_width="46dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/rgColors"
-                    android:layout_toRightOf="@+id/btnL"
-                    android:text="XL"
-                    android:textColor="@color/colorPrimary"
-                    android:background="@drawable/button_border"/>
-
-                <TextView
-                    android:id="@+id/txtDescription"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/btnM"
-                    android:text="@string/DescriptionTxt"
-                    android:textColor="@color/black" />
-
-                <TextView
-                    android:id="@+id/multilineDesciption"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/txtDescription"
-                    android:text="@string/mlDescription" />
-
-                <TextView
-                    android:id="@+id/measurementTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/multilineDesciption"
-                    android:text="@string/MeasurementTxt"
-                    android:textColor="@color/black" />
-
-                <TextView
-                    android:id="@+id/mlMeasurementTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/measurementTxt"
-                    android:text="@string/mlMeasurement" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/mlMeasurementTxt"
-                    android:id="@+id/btnAddCart"
-                    android:text="@string/AddCartTxt"
-                    android:onClick="displaySnackBar"/>
-
-
-            </RelativeLayout>
-
-
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mlMeasurementTxt"
+                        android:id="@+id/btnAddCart"
+                        android:text="@string/AddCartTxt"
+                        android:onClick="displaySnackBar"/>
+                </RelativeLayout>
+            </android.support.v4.widget.NestedScrollView>
         </LinearLayout>
-
-
-</ScrollView>
+    </ScrollView>
+</LinearLayout>
