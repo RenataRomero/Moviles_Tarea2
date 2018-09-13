@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ActivityMain">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bicicleta"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"/>
+
+                <TextView
+                    android:id="@+id/txtVintage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/BicycleTxt" />
+
+                <TextView
+                    android:id="@+id/txtColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtVintage"
+                    android:text="@string/ColorTxt"
+                    android:textColor="@color/black"/>
+
+                <RadioGroup
+                    android:id="@+id/rgColors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtColor"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbColor1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/gray"/>
+
+                    <RadioButton
+                        android:id="@+id/rbColor2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/brown"/>
+
+                    <RadioButton
+                        android:id="@+id/rbColor3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/pink"/>
+
+                    <RadioButton
+                        android:id="@+id/rbColor4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/black"/>
+
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/btnM"
+                    android:layout_width="46dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rgColors"
+                    android:text="M" />
+
+                <Button
+                    android:id="@+id/btnS"
+                    android:layout_width="46dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rgColors"
+                    android:layout_toRightOf="@+id/btnM"
+                    android:text="S" />
+
+                <Button
+                    android:id="@+id/btnL"
+                    android:layout_width="46dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rgColors"
+                    android:layout_toRightOf="@+id/btnS"
+                    android:text="L"/>
+
+                <Button
+                    android:id="@+id/btnXL"
+                    android:layout_width="46dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rgColors"
+                    android:layout_toRightOf="@+id/btnL"
+                    android:text="XL"/>
+
+                <TextView
+                    android:id="@+id/txtDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnM"
+                    android:text="@string/DescriptionTxt"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/multilineDesciption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtDescription"
+                    android:text="@string/mlDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/measurementTxt"
+                    android:layout_below="@+id/multilineDesciption"
+                    android:text="@string/MeasurementTxt"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mlMeasurementTxt"
+                    android:layout_below="@+id/measurementTxt"
+                    android:text="@string/mlMeasurement"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mlMeasurementTxt"
+                    android:text="@string/AddCartTxt" />
+
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+</ScrollView>
