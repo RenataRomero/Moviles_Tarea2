@@ -1,5 +1,6 @@
 package com.iteso.tarea2;
 
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,26 +30,14 @@ public class ActivityMain extends AppCompatActivity {
 
         btnAddCart = (Button)findViewById(R.id.btnAddCart);
 
-       // Snackbar.make(this, getResources().getString(R.string.AddedCartTxt), Snackbar.LENGTH_LONG)
-         //       .setAction("Undo", new View.OnClickListener() {
-           //         @Override
-             //       public void onClick(View view) {
-               //         btnAddCart.setText(R.string.AddCartTxt);
-                 //   }
-                //}).show();
+        btnAddCart.setText(R.string.AddedCartTxt);
+
+        Snackbar.make(v, getResources().getString(R.string.AddedCartTxt), Snackbar.LENGTH_LONG).setAction("Undo", new View.OnClickListener() {
+                    @Override
+                  public void onClick(View view) {
+                        btnAddCart.setText(R.string.AddCartTxt);
+                   }
+                }).show();
     }
-
-    public void stayFocused(View v){
-
-        btnM = (Button) findViewById(R.id.btnM);
-
-        if (btnM.isPressed())
-        {
-            btnM.setFocusable(true);
-        }
-
-
-    }
-
-
+    
 }
